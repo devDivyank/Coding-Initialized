@@ -8,11 +8,6 @@ double ballHeight(int t);
 
 int main(){
 
-	/*cout << "What is the tower's height in metres? \n";
-	double height;
-	cin >> height;
-	int i=0;*/
-	
 	double height=getHeight();
 	int i;
 	
