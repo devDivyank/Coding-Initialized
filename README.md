@@ -1,2 +1,2 @@
 # Coding-Initialized
-Starting out!
+Starting out with some BASIC PROGRAMS!
