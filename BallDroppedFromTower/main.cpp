@@ -4,19 +4,19 @@
 using namespace std;
 
 double getHeight();
-double ballHeight(int t);
+double droppedHeight(int t);
 
 int main(){
 
 	double height=getHeight();
-	int i;
+	int i=0;
 	
 	do{
-		cout << "\nAt " << i << " seconds, the ball is at height: " << (height - ballHeight(i)) << " meters \n";
+		cout << "\nAt " << i << " seconds, the ball is at height: " << (height - droppedHeight(i)) << " meters \n";
 		i++;
-	} while ((height-ballHeight(i))>=0);
+	} while ((height-droppedHeight(i))>=0);
 	
-	if ((height-ballHeight(i))<=0){
+	if ((height-droppedHeight(i))<=0){
 		cout << "\nThe ball is on the ground now.";
 	}
 	
@@ -31,7 +31,7 @@ double getHeight(){
 	return height;
 }
 
-double ballHeight(int t){
+double droppedHeight(int t){
 	double dist, seconds;
 	seconds = t;
 	dist = myConstants::g * (seconds*seconds) / 2;
