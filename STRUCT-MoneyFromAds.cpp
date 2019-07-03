@@ -9,7 +9,6 @@ struct advertising{
     double earnPerAd;
 };
 
-double calculateEarning(advertising obj);
 void printInfo(advertising object);
 
 int main()
@@ -30,22 +29,12 @@ int main()
     return 0;
 }
 
-double calculateEarning(advertising obj){
-    
-    double total = obj.adsShown*(obj.adsClicked/100)*obj.earnPerAd;
-    
-    return total;
-}
-
 void printInfo(advertising obj){
     cout << "Ads shown : " << obj.adsShown;
     cout << "\nAds clicked on (%) : " << obj.adsClicked;
     cout << "\nEarning from each ad : " << obj.earnPerAd;
     
-    double amount = calculateEarning(obj);
+    double amount = obj.adsShown*(obj.adsClicked/100)*obj.earnPerAd;
     
     cout << "\nTotal money earned : "<< amount;    
 }
-    
-    
-    
